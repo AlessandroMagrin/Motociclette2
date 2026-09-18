@@ -3,7 +3,7 @@
 namespace gestioneMoto
 {
     public class CMoto
-    { // proprieta
+    { // property
         public string Targa { get; set; }
         public string Marca { get; set; }
         public string Modello { get; set; }
@@ -36,7 +36,7 @@ namespace gestioneMoto
             Serbatoio = serbatoio;
         }
 
-        public override string ToString() // to string 
+        public override string ToString() 
         {
             return "Targa: " + Targa + ", Marca " + Marca + ", Modello: " + Modello + ", PrezzoBase: " + PrezzoBase + ", Chilometraggio: " + Chilometraggio + ", Cilindrata: " + Cilindrata + ", Serbatoio: " + Serbatoio;
         }
@@ -71,7 +71,7 @@ namespace gestioneMoto
             Indirizzo = indirizzo;
         }
 
-        //to string
+   
         public override string ToString()
         {
             return "Officina: " + Nome + ", Indirizzo: " + Indirizzo + ", Moto presenti: " + numeroMoto;
@@ -133,14 +133,14 @@ namespace gestioneMoto
             }
             return prezzoIntero;
         }
-    } // 
+    } 
 
     class Program
     {
         static void Main(string[] args)
         {
-            CMoto moto = new CMoto("X452", "Kawasaki", "Z5", 500, 500, 500, 50);
-            COfficina officina = new COfficina("Officina Rossi", "Via Roma 10");
+            CMoto moto = new CMoto("X452AW", "Kawasaki", "Z5", 500, 300, 5000, 90);
+            COfficina officina = new COfficina("Officina Bianchi", "Via Europa 1");
 
             moto.AggiornaChilometraggio(100);
             officina.MotoDaRiparare(moto);
